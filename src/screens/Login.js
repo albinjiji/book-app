@@ -18,9 +18,9 @@ export default class Login extends React.Component{
             <TextInput style={styles.passText} placeholder={'Password'} 
                         underlineColorAndroid='transparent'  secureTextEntry /></View>
             <View style={styles.login}>
-                <Text style={styles.test}>       Login</Text>
+                <Text style={styles.test} onPress={()=>navigate('Home')}>       Login</Text>
             </View>
-            <View style={styles.login}><Text style={styles.test} onPress={()=>navigate ('Register')}>     Register</Text>
+            <View style={styles.login}><Text style={styles.test} onPress={()=>navigate ('Register')}>     New User</Text>
             </View>
 
             </SafeAreaView>

@@ -9,7 +9,7 @@ export default class Register extends React.Component{
             <SafeAreaView style={styles.container}>
                 <Image source = {require('../images/image.jpg')} 
                 style = {{width:"100%", height:"40%"}}  />
-            <Text style={styles.fontText}>Book App</Text>
+            <Text style={styles.fontText}>New User Register</Text>
             <View style={styles.form}>
             <TextInput style={styles.emailText} placeholder={'Email'} 
                         underlineColorAndroid='transparent' /></View>
@@ -20,7 +20,7 @@ export default class Register extends React.Component{
                         <TextInput style={styles.passText} placeholder={'Confirm Password'} 
                         underlineColorAndroid='transparent'  secureTextEntry /></View>
             <View style={styles.login}>
-                <Text style={styles.test} onPress={()=>navigate ('Login')} >     Register</Text>
+                <Text style={styles.test} onPress={()=>navigate('Login')} >     Register</Text>
             </View>
 
             </SafeAreaView>
