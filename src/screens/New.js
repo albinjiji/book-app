@@ -16,6 +16,7 @@ export default class Home extends React.Component{
             noteArray: [],
             noteText: '',
             noteAuthor: '',
+            noteRating: '',
         }
     }
 
@@ -53,6 +54,15 @@ export default class Home extends React.Component{
                         underlineColorAndroid='transparent'>
                         
                     </TextInput>
+                    <TextInput 
+                        style={styles.textRate}
+                        onChangeText={(noteRating) => this.setState({noteRating})}
+                        value={this.state.noteRating}
+                        placeholder='Rating'
+                        placeholderTextColor='white'
+                        underlineColorAndroid='transparent'>
+                        
+                    </TextInput>
 
                 </View>
                 <TouchableOpacity onPress={ this.addNote.bind(this) } style={styles.addButton}>
@@ -66,10 +76,12 @@ export default class Home extends React.Component{
         if (this.state.noteText) {
             this.state.noteArray.push({
                 'note': this.state.noteText,
-                'auth': this.state.noteAuthor
+                'auth': this.state.noteAuthor,
+                'rate': this.state.noteRating,
             });
             this.setState({ noteText: '' });
             this.setState({noteAuthor: ''});
+            this.setState({ noteRating: ''});
         }
     }
 
@@ -133,6 +145,14 @@ const styles = StyleSheet.create({
         fontSize: 24,
     },
     textAuth: {
+        alignSelf: 'stretch',
+        color: '#fff',
+        padding: 20,
+        backgroundColor: '#252525',
+        borderTopWidth: 2,
+        borderTopColor: '#ededed',
+    },
+    textRate: {
         alignSelf: 'stretch',
         color: '#fff',
         padding: 20,

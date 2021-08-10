@@ -11,6 +11,7 @@ export default class Book extends React.Component{
             <View key={this.props.keyval} style={styles.note}>
                 <Text style={styles.noteText}>{this.props.val.note}</Text>
                 <Text style={styles.noteAuthor}>Author: {this.props.val.auth}</Text>
+                <Text style={styles.noteRating}>Rating: {this.props.val.rate}</Text>
                 <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
                     <Text style={styles.noteDeleteText}>Remove</Text>
                 </TouchableOpacity>
@@ -46,6 +47,11 @@ const styles = StyleSheet.create({
         color: 'white',
     },
     noteAuthor: {
+        paddingLeft: 20,
+        borderLeftWidth: 10,
+        borderLeftColor: '#E91E63',
+    },
+    noteRating: {
         paddingLeft: 20,
         borderLeftWidth: 10,
         borderLeftColor: '#E91E63',
